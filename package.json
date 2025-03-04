@@ -1,0 +1,16 @@
+{
+  "name": "laptop-rental-landing",
+  "version": "1.0.0",
+  "description": "Laptop Rental Landing Page",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": ["laptop", "rental", "landing-page", "nairobi"],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

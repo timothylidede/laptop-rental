@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LaptopRent - Premium Laptop Rentals</title>
+    
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Enhanced Visual Design */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #4a90e2 0%, #50c878 100%);
+            --secondary-gradient: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            --background-gradient: linear-gradient(to right, #f0f2f5, #e1e7ec);
+        }
+
+        body {
+            background: var(--background-gradient);
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        /* Hero Section Styling */
+        .hero-body {
+            background: var(--primary-gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255,255,255,0.2), transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Laptop Card Enhancements */
+        .laptop-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.1);
+            transition: all 0.4s ease;
+            perspective: 1000px;
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 30px 50px rgba(0,0,0,.15);
+        }
+
+        .laptop-card .card-image {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            overflow: hidden;
+        }
+
+        .laptop-card .card-image img {
+            transition: transform 0.4s ease;
+        }
+
+        .laptop-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 1.5rem;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: white;
+            padding: 3rem 1.5rem;
+        }
+
+        .contact-highlight {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-highlight i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        .social-links .button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links .button:hover {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Responsive Typography */
+        @media screen and (max-width: 768px) {
+            .title.is-1 {
+                font-size: 2.5rem;
+            }
+            .subtitle.is-4 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section with Header -->
+    <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1 has-text-white">Laptop Rentals in Nairobi</h1>
+                <h2 class="subtitle is-4 has-text-white-bis">
+                    Refurbished Laptops. Professional Quality. Instant Availability.
+                </h2>
+                <a href="#laptops" class="button is-light is-large is-rounded mt-4">
+                    View Laptops
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laptop Listings -->
+    <section id="laptops" class="section">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered mb-6">Our Laptop Selection</h2>
+            <div class="columns is-multiline is-centered">
+                <!-- Laptop Card 1 -->
+                <div class="column is-4">
+                    <div class="card laptop-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/images/lenovo.jpg" alt="Lenovo ThinkPad X260">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content has-text-centered">
+                                <h3 class="title is-4">Lenovo ThinkPad X260</h3>
+                                <p class="subtitle is-6">Intel Core i5, 8GB RAM, 256GB SSD, 12.5" Refurbished</p>
+                                <p class="has-text-weight-bold is-size-5">KES 150/week</p>
+                                <a href="tel:+254795536131" class="button is-primary is-rounded mt-3">Call to Rent</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laptop Card 2 -->
+                <div class="column is-4">
+                    <div class="card laptop-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="/images/hp.jpg" alt="HP Elitebook 840 G5">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content has-text-centered">
+                                <h3 class="title is-4">HP Elitebook 840 G5</h3>
+                                <p class="subtitle is-6">8th Gen Core i5, 16GB RAM, 512GB SSD, 14" Windows 10 Pro</p>
+                                <p class="has-text-weight-bold is-size-5">KES 200/week</p>
+                                <a href="tel:+254795536131" class="button is-primary is-rounded mt-3">Call to Rent</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Process -->
+    <section class="section has-background-white-ter">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered mb-6">How It Works</h2>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="box" style="background: var(--secondary-gradient); color: white;">
+                        <div class="content">
+                            <ol style="color: white;">
+                                <li>Browse our curated laptop collection</li>
+                                <li>Call +254 795 536 131 for rental details</li>
+                                <li>Discuss your specific requirements</li>
+                                <li>Arrange pickup or delivery</li>
+                            </ol>
+                            <div class="pricing has-text-centered">
+                                <p class="is-size-5">
+                                    <strong>Flexible Pricing:</strong> 
+                                    KES 50/day | KES 150/week | KES 500/month
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8 has-text-centered">
+                    <p class="title is-4 has-text-white mb-4">
+                        <strong class="has-text-white">VendAI Tech Rentals</strong>
+                    </p>
+                    
+                    <div class="contact-highlight">
+                        <p class="is-size-5">
+                            <i class="fas fa-phone"></i>
+                            <strong>Call Us:</strong> +254 795 536 131 or +254 743 890 546 
+                        </p>
+                        <p class="is-size-5 mt-2">
+                            <i class="fas fa-envelope"></i>
+                            <strong>Email:</strong> tim@vendai.digital or davis@vendai.digital
+                        </p>
+                    </div>
+
+                    <div class="social-links mt-4">
+                        <a href="#" class="button is-light mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="button is-light mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="button is-light mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+
+                    <p class="has-text-white mt-4">
+                        © 2024 VendAI Tech Rentals. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
